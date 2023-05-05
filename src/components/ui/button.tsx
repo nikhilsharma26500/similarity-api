@@ -5,7 +5,7 @@ import * as React from 'react';
 import { getDisplayName } from 'next/dist/shared/lib/utils';
 
 
-const buttonVariants = cva(
+export const buttonVariants = cva(
   'active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900',
   {
     variants: {
@@ -55,6 +55,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 )
 
-Button.displayName = 'abc';
+Button.displayName = 'Button';
 
 export default Button
