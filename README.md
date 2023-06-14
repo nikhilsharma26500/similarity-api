@@ -1,5 +1,4 @@
-## Dependencies:
-
+# Dependencies:
 `@emotion/react`: Library for writing CSS styles with JavaScript.
 `@emotion/styled`: Library for styling React components with Emotion.
 `@mui/material`: Material-UI library for React components.
