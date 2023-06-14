@@ -29,4 +29,3 @@
 `simplebar-react`: Custom scrollbars library for React.  
 `tailwind-merge`: Utility library for merging Tailwind CSS classes.  
 `zod`: TypeScript-first schema validation library.
->>>>>>> ffc8c567e4d30ea72f51969f903fe3921c2cc6a9
