@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 // const { colors } = require('@mui/material');
 const { fontFamily } = require("tailwindcss/defaultTheme");
-const { colors} = require("tailwindcss/colors");
+const { colors } = require("tailwindcss/colors");
 
 module.exports = {
   darkMode: ["class"],
@@ -23,14 +23,17 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', ...fontFamily.sans],
+        sans: ["var(--font-inter)", ...fontFamily.sans],
       },
       colors: {
         ...colors,
-        'light-gold': '#f5bc51',
-        'dark-gold': '#533519',
+        "light-gold": "#f5bc51",
+        "dark-gold": "#533519",
       },
-      plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+      plugins: [
+        require("tailwindcss-animate"),
+        require("@tailwindcss/typography"),
+      ],
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

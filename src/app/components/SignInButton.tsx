@@ -1,35 +1,38 @@
 'use client'
 
-import { signIn } from 'next-auth/react'
+import { signOut } from 'next-auth/react'
 import { FC, useState } from 'react'
 import { Button } from './ui/Button'
+import { toast } from './ui/toast'
 
-interface SignInButtonProps {
+/**
+ * NextJS does not allow to pass function from server -> client components,
+ * hence this unreusable component.
+ */
 
-}
+interface SignOutButtonProps {}
 
-const SignInButton: FC<SignInButtonProps> = ({ }) => {
-    const [isLoading, setIsLoading] = useState<boolean>(false)
+const SignOutButton: FC<SignOutButtonProps> = ({}) => {
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
-    const signInWithGoogle = async () => {
-        setIsLoading(true)
-
-        try {
-            await signIn('google')
-        } catch (error) {
-            toast: ({
-                title: "Error signing in",
-                message: "Please try again later",
-                type: "error",
-            })
-        }
-
-        return (
-            <Button onClick={signInWithGoogle} isLoading={isLoading}>
-                Sign in
-            </Button>
-        )
+  const signUserOut = async () => {
+    try {
+      setIsLoading(true)
+      await signOut()
+    } catch (error) {
+      toast({
+        title: 'Error signing out',
+        message: 'Please try again later.',
+        type: 'error',
+      })
     }
+  }
+
+  return (
+    <Button onClick={signUserOut} isLoading={isLoading}>
+      Sign out
+    </Button>
+  )
 }
 
-export default SignInButton
+export default SignOutButton

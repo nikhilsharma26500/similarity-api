@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { buttonVariants } from './ui/Button'
 import SignInButton from './SignInButton'
 import SignOutButton from './SignOutButton'
-import ThemeToggle from './ThemeToggle'
+import {ThemeToggle} from './ThemeToggle'
 
 const Navbar = async () => {
     const session = await getServerSession()
