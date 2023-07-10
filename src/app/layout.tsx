@@ -26,7 +26,7 @@ export default function RootLayout({
 
         {/* Allow for more height on mobile devices */}
         <div className='h-40 md:hidden' />
-        {children}</body>
+        </body>
     </html>
   )
 }
