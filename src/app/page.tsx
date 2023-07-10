@@ -4,6 +4,7 @@ import LargeHeading from "../app/components/ui/LargeHeading";
 import '../styles/globals.css'
 import Paragraph from './components/ui/Paragraph';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Similarity API | Home",
@@ -22,8 +23,22 @@ export default function Home() {
           </LargeHeading>
           <Paragraph className='max-w-xl lg:text-left'>
             With the text similarity api you can easily determine the similarity between two peices of text with a free {' '}
-            <Link href='/login' className='underline underline-offset-2 text-black dark:text-gold'></Link>
+            <Link href='/login' className='underline underline-offset-2 text-black dark:text-light-gold'>
+              API Key
+            </Link>
+            .
           </Paragraph>
+
+          <div className="relative w-full max-w-lg lg:max-w-3xl lg:left-1/2 aspect-square lg:absolute">
+            <Image 
+            priority
+            className='img-shadow'
+            quality={100}
+            style={{objectFit: 'contain'}}
+            fill
+            src='/typewriter.png'
+            alt="typewriter"/>
+          </div>
         </div>
       </div>
     </div>
